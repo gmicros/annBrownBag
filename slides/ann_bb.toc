@@ -1,8 +1,1 @@
 \beamer@endinputifotherversion {3.24pt}
-\beamer@sectionintoc {1}{\sc Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{\sc Background}{5}{0}{2}
-\beamer@sectionintoc {3}{\sc Methodology}{7}{0}{3}
-\beamer@sectionintoc {4}{\sc Results}{9}{0}{4}
-\beamer@sectionintoc {5}{\sc Conclusion}{10}{0}{5}
-\beamer@sectionintoc {6}{\sc Discussion}{12}{0}{6}
-\beamer@sectionintoc {7}{\sc Section}{13}{0}{7}
