@@ -1,0 +1,20 @@
+\frametitle{\sc Columns Code}
+
+
+\begin{lstlisting}
+\begin{columns}
+\column{2.4in}{\sc Results}
+\begin{itemize}
+\item One
+\item Two
+\end{itemize}
+\column{2in}{\sc Consequences}
+\begin{itemize}
+\item Other one
+\end{itemize}
+\end{columns}
+
+
+\end{lstlisting}
+
+

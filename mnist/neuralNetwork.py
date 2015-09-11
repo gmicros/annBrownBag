@@ -24,7 +24,8 @@ class neuralNetwork():
                 return np.tanh(x)
 
         def delFunk(self, x):
-                return 1 - x ** 2
+                #return 1 - x ** 2
+		return x * (1 - x)
 
         def train(self, iterations):
                 for i in range(iterations):
@@ -32,16 +33,16 @@ class neuralNetwork():
                         y = self.actFunk(np.dot(self.Wkj, h))
 
                         err = (self.outputs - y)
-
                         delK = 0.1 * err * self.delFunk(y);
                         delJ = np.transpose(np.dot(np.transpose(delK), self.Wkj)) * self.delFunk(h)
+
                         deltaK = np.dot(delK, np.transpose(h))
                         deltaJ = np.dot(delJ, np.transpose(self.inputs))
 
                         self.Wkj = self.Wkj + deltaK / self.obs
                         self.Wji = self.Wji + deltaJ[0:self.j,:] / self.obs
 
-                        print np.mean(np.mean(err))
+		print (np.mean(np.mean(err ** 2)))
 
         def test(self, features):
                 features = (features - np.mean(features))/ np.std(features)

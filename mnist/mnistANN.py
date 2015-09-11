@@ -7,16 +7,17 @@ train, valid, test = cPickle.load(f)
 f.close
 
 features = train[0].shape[1]
-obs = train[0].shape[0]
+#obs = train[0].shape[0]
+obs = 100
 labels = np.ptp(train[1])+1 
 
-trainFeatures = np.transpose(train[0])
+trainFeatures = np.transpose(train[0][0:obs])
 trainLabels = np.zeros( (labels, obs) )
 
 for i in range(obs):
 	trainLabels[train[1][i]][i] = 1
 
-ann = nn.neuralNetwork(trainFeatures, trainLabels, 10)
+ann = nn.neuralNetwork(trainFeatures, trainLabels, 300)
 ann.normalizeInputs()
 ann.initializeWeights()
 #ann.train(100)
